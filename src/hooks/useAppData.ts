@@ -59,11 +59,28 @@ export const useAppData = () => {
     setFeedError('');
 
     try {
-      const res = await axiosInstance.get('/feed');
-      const mappedFeed = res.data.map(mapBackendUser);
-      dispatch(setFeed(mappedFeed));
+      const res = await axiosInstance.get('/feed', {
+        headers: {
+          'Cache-Control': 'no-cache',
+          Pragma: 'no-cache',
+          Expires: '0',
+        },
+      });
+
+      if (res.status === 304) {
+        dispatch(setFeed([]));
+        setFeedError('');
+      } else {
+        const mappedFeed = Array.isArray(res.data) ? res.data.map(mapBackendUser) : [];
+        dispatch(setFeed(mappedFeed));
+      }
     } catch (err: any) {
-      setFeedError(err.response?.data?.message || 'Failed to fetch developers feed.');
+      if (err.response?.status === 304) {
+        dispatch(setFeed([]));
+        setFeedError('');
+      } else {
+        setFeedError(err.response?.data?.message || 'Failed to fetch developers feed.');
+      }
     } finally {
       setFeedLoading(false);
     }

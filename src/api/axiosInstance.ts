@@ -6,6 +6,7 @@ const axiosInstance = axios.create({
   headers: {
     'Content-Type': 'application/json',
   },
+  validateStatus: (status) => status >= 200 && status < 400,
 });
 
 export default axiosInstance;
