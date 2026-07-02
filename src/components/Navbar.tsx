@@ -101,7 +101,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
             </svg>
             <span className="font-black tracking-wider bg-gradient-to-r from-pink-500 via-red-500 to-orange-500 bg-clip-text text-transparent hover:brightness-110 transition-all">
-              DevTinder
+              DevConnect
             </span>
           </a>
         </div>

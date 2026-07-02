@@ -96,7 +96,7 @@ export const Requests: React.FC = () => {
             const user = req.fromUserId;
             if (!user) return null;
             
-            const displayName = `${user.firstName || ''} ${user.lastName || ''}`.trim() || user.userName || 'DevTinder User';
+            const displayName = `${user.firstName || ''} ${user.lastName || ''}`.trim() || user.userName || 'DevConnect User';
             const img = user.imageUrl || `https://avatar.iran.liara.run/public/username?username=${encodeURIComponent(displayName)}`;
             const isButtonDisabled = actionLoading === req._id;
 

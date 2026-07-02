@@ -43,7 +43,7 @@ export const useAppData = () => {
       const reqRes = await fetchReceivedRequests();
       dispatch(setRequests(reqRes.data.data || []));
     } catch (error) {
-      console.log('[DevTinder] No active session found.');
+      console.log('[DevConnect] No active session found.');
     } finally {
       setBootstrapLoading(false);
     }

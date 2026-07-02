@@ -31,7 +31,7 @@ function App() {
             <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
           </svg>
           <span className="text-4xl font-black tracking-wider bg-linear-to-r from-pink-500 via-red-500 to-orange-500 bg-clip-text text-transparent">
-            DevTinder
+            DevConnect
           </span>
         </div>
         <span className="loading loading-ring loading-lg text-primary"></span>
@@ -45,7 +45,7 @@ function App() {
       <div className="min-h-screen bg-base-200 flex flex-col justify-center overflow-y-auto">
         <Login onLoginSuccess={handleLoginSuccess} />
         <footer className="footer footer-center p-6 bg-base-100/50 text-base-content/40 border-t border-base-content/5">
-          <p className="text-xs">© 2026 DevTinder.</p>
+          <p className="text-xs">© 2026 DevConnect.</p>
         </footer>
       </div>
     );
@@ -83,7 +83,7 @@ function App() {
 
       <footer className="footer footer-center p-6 bg-base-100 text-base-content/60 border-t border-base-content/5">
         <aside>
-          <p className="text-xs">© 2026 DevTinder.</p>
+          <p className="text-xs">© 2026 DevConnect.</p>
         </aside>
       </footer>
     </div>

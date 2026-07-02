@@ -166,7 +166,7 @@ export const Login: React.FC<LoginProps> = ({ onLoginSuccess }) => {
                 <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
               <span className="text-3xl font-black tracking-wider bg-gradient-to-r from-pink-500 via-red-500 to-orange-500 bg-clip-text text-transparent">
-                DevTinder
+                DevConnect
               </span>
             </div>
             <p className="text-base-content/60 text-xs">Swipe. Match. Code. Deploy.</p>

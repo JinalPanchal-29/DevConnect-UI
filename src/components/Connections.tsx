@@ -76,7 +76,7 @@ export const Connections: React.FC = () => {
       ) : (
         <div className="grid grid-cols-1 gap-4 w-full">
           {connections.map((match: any) => {
-            const displayName = `${match.firstName || ''} ${match.lastName || ''}`.trim() || match.userName || 'DevTinder User';
+            const displayName = `${match.firstName || ''} ${match.lastName || ''}`.trim() || match.userName || 'DevConnect User';
             const img = match.imageUrl || `https://avatar.iran.liara.run/public/username?username=${encodeURIComponent(displayName)}`;
             
             return (
